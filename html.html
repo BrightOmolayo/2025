@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility</title>
+</head>
+<body>
+    <header></header>
+    <main> 
+        <div>
+            web accessability
+            <hgroup>
+                <h1>web accessability</h1>
+                <p>There are different types of disabilities, including (but not limited to) auditory, physical/motor, cognitive, or visual. A disability can be permanent, such as a user who is completely blind or deaf, or it can be temporary, such as a user with a broken arm. Users can have multiple disabilities at any given time. Older users with changing abilities may even have similar conditions as those who have a disability.</p>
+            </hgroup>
+            <hr>
+            <hgroup>
+                <h1>Web Content Accessibility Guidelines</h1>
+                <ul>
+                    <li>Perviceable:Users must be able to perceive the information or user interfaces being presented. For example, light text on a light background could be difficult for some users with a visual impairment to perceive.</li>
+                    <li> Operable: Users must be able to operate any user interfaces or navigation, and interfaces cannot require an interaction which the user cannot perform. A navigation bar with drop-down menus that only expand when a mouse cursor hovers over them, for example, would not be operable by keyboard users giving those menu items focus.</li>
+                    <li>Understandable: Users must be able to understand any information or user interface that is presented to them. For example, if a user tried submitting a form and received an error such as “Error 113: Bad data”, they wouldn’t be able to understand what the error actually means or how to fix whatever caused the error.</li>
+                    <li>Robust: Content must be accessible by current assistive technologies and other user agents, and must remain accessible as those technologies advance.</li>
+                </ul>
+            </hgroup>
+            <hr>
+            <hgroup>
+                <h1>Semantic html</h1>
+                <p><a href="https://www.theodinproject.com/lessons/node-path-advanced-html-and-css-semantic-html">link to semantic lecture</a></p>
+                <h2>Headings and landmarks</h2>
+                <ol>
+                    <li>aside</li>
+                    <li>footer</li>
+                    <li>form</li>
+                    <li>header</li>
+                    <li>main</li>
+                    <li>nav</li>
+                    <li>section</li>
+                </ol>
+            </hgroup>
+            <hr>
+            <hgroup>
+                <h1>Accessible Colors</h1>
+            </hgroup>
+            <hr>
+            <hgroup>
+                <h1>Keyboard Navigation</h1>
+                <p>pressing the Space or Enter keys on a keyboard when a 'button' has focus will trigger the “click” event.</p>
+                <p> You should never completely remove focus styles.</p>
+                <h2>Tab order</h2>
+                <p>The tab order is the order in which elements on the page will receive focus when pressing the Tab key, and is by default in the same order as the order of elements listed in the HTML file:</p>
+                <h2>Hidden content</h2>
+                <p>Sometimes you may want to hide some content until a specific event occurs, such as a user clicking on a button to open a menu or a modal box. When you want to hide content for this sort of purpose, you need to make sure the content is not only visually hidden, but also hidden from assistive technologies until that content is meant to be visible.</p>
+                <p>One way to prevent this frustrating behavior is to give each individual item in that hidden content a tabindex value of -1, since that prevents an element from receiving focus via the keyboard (though you can still give it focus with JavaScript’s focus() method). While this fixes the issue for keyboard users, other assistive technologies would still have access to and could still announce this hidden content.
+
+                    A better solution is giving the container for the hidden content itself either the display: none or visibility: hidden CSS property when it’s hidden, and removing or overriding that property when it’s meant to be visible. This not only removes the menu items from the tab order, but it also prevents assistive technologies from announcing them.</p>
+            </hgroup>
+            <hr>
+            <hgroup>
+                <h1>Meaningful Text</h1>
+                <ol>
+                    <li>Make sure that the text content of the <a> element somehow indicates where the link redirects to and that it’s brief (around 100 characters). So avoid using phrases like “click here” or “this page”</li>
+                    <li>If a link would open or download a file, include text that tells the user what kind of file it is as well as the file size.</li>
+                    <li>If a link would automatically open in a new tab or window with the target="_blank" attribute, you should indicate this to the user in some way.</li>
+                </ol>
+                <h2>Forms</h2>
+                <h3>Alternative text</h3>
+            </hgroup>
+            <hr>
+            <hgroup>
+                <h1>WAI-ARIA</h1>
+                <a href="All interactive elements must have an accessible name.">Aria</a>
+                <ol>
+                    <li>Always use native HTML elements and attributes over ARIA when possible.</li>
+                    <li>Never change native semantics, unless you have no other choice</li>
+                    <li>All interactive ARIA controls must be usable with a keyboard.</li>
+                    <li>Never use role='presentation' or aria-hidden='true' on focusable elements.</li>
+                    <li>All interactive elements must have an accessible name.</li>
+                </ol>
+                <code> nav aria-label='main navigation'>...</nav>
+                </code>
+            </hgroup>
+            <hr>
+            <h1>Accessibility Auditing</h1>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
