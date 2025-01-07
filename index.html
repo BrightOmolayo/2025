@@ -307,6 +307,643 @@
             <h1>Form Validation</h1>
            </hgroup>
         </section>
+        <hr>
+        <hr>
+        <h1>CSS</h1>
+        <ul>
+            <li>outline</li>
+            <p>The outline-width property specifies the width of the outline, and can have one of the following values:
+
+                thin (typically 1px)
+                medium (typically 3px)
+                thick (typically 5px)
+                A specific size (in px, pt, cm, em, etc)</p>
+                <li>outline-style: outset;</li>
+        </ul>
+        <p>
+            p.ex1 {outline: dashed;}
+            p.ex2 {outline: dotted red;}
+            p.ex3 {outline: 5px solid yellow;}
+            p.ex4 {outline: thick ridge pink;}
+        </p>
+        <h6>
+            CSS Outline Offset
+            The outline-offset property adds space between an outline and the edge/border of an element. The space between an element and its outline is transparent.
+
+            The following example specifies an outline 15px outside the border edge:
+        </h6>
+        <p>
+            p {
+                margin: 30px;
+                border: 3px solid black;
+                outline: 10px solid purple;
+                outline-offset: 30px;
+              }
+              p {
+                margin: 30px;
+                background: yellow;
+                border: 1px solid black;
+                outline: 1px solid red;
+                outline-offset: 15px;
+              }
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hgroup>
+            <h1>CSS Text Decoration</h1>
+            <h4>
+                text-decoration-line
+                text-decoration-color
+                text-decoration-style
+                text-decoration-thickness
+                text-decoration
+            </h4>
+            <p>
+                h1 {
+                    text-decoration-line: overline;
+                  }
+                  
+                  h2 {
+                    text-decoration-line: line-through;
+                  }
+                  
+                  h3 {
+                    text-decoration-line: underline;
+                  }
+                  
+                  p {
+                    text-decoration-line: overline underline;
+                  }
+            </p>
+        </hgroup>
+        <hr>
+        <hgroup>
+            <h1>CSS Text Shadow</h1>
+            <p>In its simplest use, you only specify the horizontal shadow (2px) and the vertical shadow (2px)
+                h1 {
+                    text-shadow: 2px 2px;
+                  }
+                  h1 {
+                    text-shadow: 2px 2px red;
+                  }
+                  h1 {
+                    text-shadow: 2px 2px 5px red;
+                  }
+                  h1 {
+                    color: white;
+                    text-shadow: 2px 2px 4px #000000;
+                  }
+                  h1 {
+                    text-shadow: 0 0 3px #ff0000;
+                  }
+                  h1 {
+                    text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+                  }
+                  h1 {
+                    color: white;
+                    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+                  }
+            </p>
+        </hgroup>
+        <hr>
+        <hgroup>
+            <h1>Basic Dropdown</h1>
+            <p>
+                <!-- 
+                <style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+
+<div class="dropdown">
+  <span>Mouse over me</span>
+  <div class="dropdown-content">
+    <p>Hello World!</p>
+  </div>
+</div> -->
+            </p>
+        </hgroup>
+        <hr><hr>
+        <hgroup>
+            <h1>CSS Attribute Selectors</h1>
+            <p>CSS [attribute="value"] Selector
+                The [attribute="value"] selector is used to select elements with a specified attribute and value.
+                
+                The following example selects all <a> elements with a target="_blank" attribute:</p>
+            <p>
+                a[target] {
+                    background-color: yellow;
+                  }
+                  a[target="_blank"] {
+                    background-color: yellow;
+                  }
+                  CSS [attribute~="value"] Selector
+                The [attribute~="value"] selector is used to select elements with an attribute value containing a specified word.
+
+                The following example selects all elements with a title attribute that contains a space-separated list of words, one of which is "flower":
+                  <!-- <style>
+[title~="flower"] {
+  border: 5px solid yellow;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS [attribute~="value"] Selector</h2>
+<p>All images with the title attribute containing the word "flower" get a yellow border.</p>
+
+<img src="klematis.jpg" title="klematis flower" width="150" height="113">
+<img src="img_flwr.gif" title="flower" width="224" height="162">
+<img src="img_tree.gif" title="tree" width="200" height="358">
+
+</body>
+</html> -->
+            </p>
+            <p>CSS [attribute|="value"] Selector
+                The [attribute|="value"] selector is used to select elements with the specified attribute, whose value can be exactly the specified value, or the specified value followed by a hyphen (-).
+                
+                Note: The value has to be a whole word, either alone, like class="top", or followed by a hyphen( - ), like class="top-text".
+                
+                Example
+                [class|="top"] {
+                  background: yellow;
+                }</p>
+                <p>
+                    CSS [attribute^="value"] Selector
+The [attribute^="value"] selector is used to select elements with the specified attribute, whose value starts with the specified value.
+
+The following example selects all elements with a class attribute value that starts with "top":
+
+Note: The value does not have to be a whole word!
+
+Example
+[class^="top"] {
+  background: yellow;
+}
+                </p>
+        </hgroup>
+        <hr>
+        <a href="https://www.w3schools.com/css/css_attribute_selectors.asp">Attribute selectors</a>
+        <hr>
+        <hr>
+        <hgroup>
+            <h1>CSS Counters</h1>
+            <p>
+                <!-- 
+                Automatic Numbering With Counters
+CSS counters are like "variables". The variable values can be incremented by CSS rules (which will track how many times they are used).
+
+To work with CSS counters we will use the following properties:
+
+counter-reset - Creates or resets a counter
+counter-increment - Increments a counter value
+content - Inserts generated content
+counter() or counters() function - Adds the value of a counter to an element
+To use a CSS counter, it must first be created with counter-reset.
+
+The following example creates a counter for the page (in the body selector), then increments the counter value for each <h2> element and adds "Section <value of the counter>:" to the beginning of each <h2> element: -->
+            </p>
+            <!-- body {
+  counter-reset: section;
+}
+
+h2::before {
+  counter-increment: section;
+  content: "class " counter(section) ": ";
+}
+</style>
+</head>
+<body>
+
+<h1>Using CSS Counters</h1>
+
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+<h2>JavaScript Tutorial</h2>
+<h2>Python Tutorial</h2>
+<h2>SQL Tutorial</h2>
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+<h2>JavaScript Tutorial</h2>
+<h2>Python Tutorial</h2>
+<h2>SQL Tutorial</h2>
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+<h2>JavaScript Tutorial</h2>
+<h2>Python Tutorial</h2>
+<h2>SQL Tutorial</h2>
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+<h2>JavaScript Tutorial</h2>
+<h2>Python Tutorial</h2>
+<h2>SQL Tutorial</h2> -->
+        </hgroup>
+        <hr>
+        <hr>
+        <hgroup>
+            <h1>CSS Website Layout</h1>
+            <a href="https://www.w3schools.com/css/css_website_layout.asp">CSS Website Layout</a>
+            <!-- 
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Header</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
+
+<div class="topnav">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+</div>
+
+<div class="row">
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+ -->
+<iframe src="./web-Layout.html" frameborder="530">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Header</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
+
+<div class="topnav">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+</div>
+
+<div class="row">
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+    
+</iframe>
+        </hgroup>
+        <hr>
+        <hgroup>
+            <h1>CSS Border Images</h1>
+            <p>With the CSS border-image property, you can set an image to be used as the border around an element.</p>
+            <p>
+                The property has three parts:
+
+                 The image to use as the border
+                Where to slice the image
+                Define whether the middle sections should be repeated or stretched
+            </p>
+            <p>
+                #borderimg {
+                    border: 10px solid transparent;
+                    padding: 15px;
+                    border-image: url(border.png) 30 round;
+                  }
+            </p>
+            <p>
+                <!-- #borderimg { 
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(border.png) 32 round;
+            }
+        </style>
+        </head>
+        <body>
+
+       <h1>The border-image Property</h1>
+
+       <p>Here, the middle sections of the image are repeated to create the border:</p>
+        <p id="borderimg">border-image: url(border.png) 30 round;</p>
+
+       <p>Here is the original image:</p><img src="border.png">
+       <p><strong>Note:</strong> Internet Explorer 10, and earlier versions, do not support the border-image property.</p> -->
+            </p>
+            <p>
+                Tip: The border-image property is actually a shorthand property for the border-image-source, border-image-slice, border-image-width, border-image-outset and border-image-repeat properties.
+            </p>
+        </hgroup>
+        <hr>
+        <hgroup>
+            <h1>CSS Multiple Backgrounds</h1>
+            <p>
+                CSS allows you to add multiple background images for an element, through the background-image property.
+
+               The different background images are separated by commas, and the images are stacked on top of each other, where the first image is closest to the viewer.
+
+               The following example has two background images, the first image is a flower (aligned to the bottom and right) and the second image is a paper background (aligned to the top-left corner):
+
+              Example
+            #example1 {
+            background-image: url(img_flwr.gif), url(paper.gif);
+            background-position: right bottom, left top;
+            background-repeat: no-repeat, repeat;
+            }
+            </p>
+        </hgroup>
+        <hr>
+        <hgroup>
+            <h1>CSS Gradients</h1>
+            <p>CSS gradients let you display smooth transitions between two or more specified colors.
+
+                CSS defines three types of gradients:
+                
+                Linear Gradients (goes down/up/left/right/diagonally)
+                Radial Gradients (defined by their center)
+                Conic Gradients (rotated around a center point)
+                </p>
+                <p>
+                    #grad1 {
+                        height: 200px;
+                        background-color: red; /* For browsers that do not support gradients */
+                        background-image: linear-gradient(red, yellow,pink,blue,green, khaki,brown);
+                      }
+                </p>
+                <p>
+                    #grad1 {
+                        height: 200px;
+                        background-color: red; /* For browsers that do not support gradients */
+                        background-image: linear-gradient(red, yellow,pink,blue,green, khaki,brown);
+                      }
+                      </style>
+                      </head>
+                      <body>
+                      
+                      <h1>Linear Gradient - Top to Bottom</h1>
+                      <p>This linear gradient starts red at the top, transitioning to yellow at the bottom:</p>
+                      
+                      <div id="grad1"></div>
+                </p>
+        </hgroup>
+        <hr>
+        <hgroup>
+            <h1>CSS Radial Gradients</h1>
+            <p>
+                A radial gradient is defined by its center.
+
+               To create a radial gradient you must also define at least two color stops.
+
+            </p>
+            <h6>
+                Syntax
+                background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+            </h6>
+            <p><style>
+                body {
+                  color:white;
+                  -webkit-backdrop-filter: blur(5px);
+                  backdrop-filter: blur(5px);
+                  /* animation: spin 5s linear infinite; */
+                  background-color: red; /* For browsers that do not support gradients */
+                  background-image: conic-gradient(blue, yellow, green,black,red, pink,white,purple,grey,olive,white,blue, yellow, green,black,red, pink,white,purple,grey,olive,white,blue, yellow, green,black,red, pink,white,purple,grey,olive,white,blue, yellow, green,black,red, pink,white,purple,grey,olive,white,blue, yellow, green,black,red, pink,white,purple,grey,olive,white,blue, yellow, green,black,red, pink,white,purple,grey,olive,white,blue, yellow, green,black,red, pink,white,purple,grey,olive,white);
+                }
+                @keyframes spin {
+  from {
+  transform: rotate(0deg);
+  }
+  to { transform: rotate(360deg);}}
+
+                p{
+                    color: (red, yellow, green, blue, purple, khaki, red, green,red, yellow, green, blue, purple, khaki, red, green,pink,red, yellow, green, blue, purple, khaki, red, green,red, yellow, green, blue, purple, khaki, red, green,red, yellow, green, blue, purple, khaki, red, green,pink,red, yellow, green, blue, purple, khaki, red, green) ,
+                }
+                </style>
+
+                
+                <h1>Radial Gradient - Evenly Spaced Color Stops</h1>
+                
+                <div id="grad1"></div></p>
+        </hgroup>
+        <hr>
+        <hgroup>
+            <h1>
+                CSS Conic Gradients
+            </h1>
+            <p>
+                A conic gradient is a gradient with color transitions rotated around a center point.
+
+            To create a conic gradient you must define at least two colors.
+
+            Syntax
+            background-image: conic-gradient([from angle] [at position,] color [degree], color [degree], ...);
+            By default, angle is 0deg and position is center.
+
+            If no degree is specified, the colors will be spread equally around the center point.
+            </p>
+            <p>
+                A conic gradient with three colors and a degree for each color:
+
+            #grad {
+             background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);
+            }
+            </p>
+            <h1>
+                <!-- 
+                <!DOCTYPE html>
+<html>
+<head>
+<style>
+#grad1 {
+  height: 200px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: conic-gradient(red, yellow, green, blue, black,red, yellow, green, blue, black,red, yellow, green, blue, black,red, yellow, green, blue, black,red, yellow, green, blue, black,red, yellow, green, blue, black,red, yellow, green, blue, black,red, yellow, green, blue, black,red, yellow, green, blue, black,red, yellow, green, blue, black,pink,white,pink,white);
+  border-radius: 70%;
+  animation: spin 6s linear infinite;
+}
+  @keyframes spin {
+  from {
+  transform: rotate(0deg);
+  }
+  to { transform: rotate(360deg);}}
+</style>
+</head>
+<body> -->
+            </h1>
+        </hgroup>
     </main>
     <footer>
         <h3>Enjoy!</h3>
