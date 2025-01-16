@@ -1,0 +1,15 @@
+{
+  "name": "brights-node-app",
+  "version": "1.0.0",
+  "description": "node practice",
+  "license": "MIT",
+  "author": "bright <brightbalogun195@gmail.com>",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "upper-case": "^2.0.2"
+  }
+}
